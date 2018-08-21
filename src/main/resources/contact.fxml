@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.macrohome.client.Controller">
+   <children>
+   
+       <HBox>
+      <children>
+              <Label text="Name: ">
+               <HBox.margin>
+                  <Insets right="3.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+              <TextField fx:id="txtName" HBox.hgrow="ALWAYS" />
+      </children>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+       </HBox>
+       <HBox>
+          <children>
+              <Label text="E-mail:">
+               <HBox.margin>
+                  <Insets right="3.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+              <TextField fx:id="txtEmail" HBox.hgrow="ALWAYS" />
+          </children>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="3.0" />
+         </VBox.margin>
+       </HBox>
+       <HBox alignment="TOP_RIGHT">
+          <children>
+              <Button fx:id="btnAdd" onMouseClicked="#ClickAdd" text="Add">
+               <HBox.margin>
+                  <Insets right="3.0" />
+               </HBox.margin>
+            </Button>
+              <Button fx:id="btnDelete" onMouseClicked="#ClickDelete" text="Delete" />
+          </children>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="3.0" />
+         </VBox.margin>
+       </HBox>
+       <TableView fx:id="tableContacts" editable="false" onMouseClicked="#ClickTableContacts" VBox.vgrow="ALWAYS">
+           <columns>
+               <TableColumn fx:id="id" text="id" visible="true" />
+               <TableColumn fx:id="name" text="Name" visible="true" />
+               <TableColumn fx:id="email" text="E-mail" visible="true" />
+           </columns>
+         <VBox.margin>
+            <Insets top="3.0" />
+         </VBox.margin>
+       </TableView>
+   </children>
+</VBox>

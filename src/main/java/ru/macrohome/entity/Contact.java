@@ -1,10 +1,12 @@
 package ru.macrohome.entity;
 
+import ru.macrohome.common.Entities;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "contact")
-public class Contact {
+public class Contact extends Entities {
     private Integer id;
     private String name;
     private String email;
